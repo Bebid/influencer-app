@@ -1,9 +1,5 @@
 <script setup>
 import Pill from './Pill.vue';
-import '../../assets/js/jquery';
-import '../../assets/js/jquery-ui.min.js';
-import '../../assets/css/jquery-ui.css';
-import '../../assets/js/jquery-ui-touch.min.js';
 </script>
 
 <template>

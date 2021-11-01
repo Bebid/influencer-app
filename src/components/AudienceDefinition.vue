@@ -1,6 +1,5 @@
 <script setup>
 import Card from './ui/Card.vue';
-import '../assets/js/gauge.js';
 </script>
 
 <template>

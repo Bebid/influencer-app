@@ -4,6 +4,7 @@ import Target from './components/Target.vue';
 import Budget from './components/Budget.vue';
 import AudienceDefinition from './components/AudienceDefinition.vue';
 import PaymentForm from './components/PaymentForm.vue';
+import {$, jQuery} from 'jquery';
 </script>
 
 <template>

@@ -7,10 +7,10 @@ import Card from './ui/Card.vue';
         <div class="grid grid-cols-1 md:grid-cols-2 items-center px-5 py-5 md:py-8 md:px-8 ">  
             <div class="mb-3">
                 <h3 class="text-lg md:text-xl font-bold mb-3">Audience Definition</h3>
-                <p>Location: United States</p>
+                <p>Location: {{data.location}}</p>
                 <p>Age: 18-65+</p>
-                <p>Potential Reach:</p>
-                <h3 class="text-lg font-bold md:text-2xl">186.000.000 people</h3>
+                <p>Potential Reach: {{data.reach}}</p>
+                <h3 class="text-lg font-bold md:text-2xl">{{data.potential}} people</h3>
             </div>
             <div class="mb-3">
                 <canvas class="mx-auto" id="gauge"></canvas>
@@ -29,7 +29,7 @@ import Card from './ui/Card.vue';
                     </div>
                     <div class="flex-grow flex-col">
                         <h6 class="text-sm text-gray-400">Number of Influencers</h6>
-                        <h3 class="text-lg">45</h3>
+                        <h3 class="text-lg">{{data.influencers}}</h3>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@ import Card from './ui/Card.vue';
                     </div>
                     <div class="flex-grow flex-col">
                         <h6 class="text-sm text-gray-400">Potential Reach</h6>
-                        <h3 class="text-lg">45</h3>
+                        <h3 class="text-lg">{{data.reach}}</h3>
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@ import Card from './ui/Card.vue';
                     </div>
                     <div class="flex-grow flex-col">
                         <h6 class="text-sm text-gray-400">Potential Engagement</h6>
-                        <h3 class="text-lg">45</h3>
+                        <h3 class="text-lg">{{data.engagement}}</h3>
                     </div>
                 </div>
             </div>
@@ -61,6 +61,11 @@ import Card from './ui/Card.vue';
 
 <script>
 export default {
+    props: {
+        data: {
+            default: {}
+        }
+    },
     mounted() {
         const opts = {
             angle: -0.2,

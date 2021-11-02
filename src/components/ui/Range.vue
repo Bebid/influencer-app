@@ -51,7 +51,7 @@ export default {
             }
         }
     },
-    mounted() {
+    updated() {
         const oSlider = $('#' + this.id).slider({
             range: this.range,
             min: this.min,

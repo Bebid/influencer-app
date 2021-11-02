@@ -12,10 +12,22 @@
 
 <script>
 export default {
-    props: ['label', 'rate'],
+    props: {
+        label: {
+            default: ''
+        },
+        rate: {
+            default: 0
+        }
+    },
+    watch: {
+        rate: function(iValue) {
+            this.dataRating = iValue;
+        }
+    },
     data() {
         return {
-            dataRating: this.rate
+            dataRating: 0
         }
     },
     emits: ['change']

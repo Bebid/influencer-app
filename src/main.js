@@ -5,8 +5,6 @@ import './index.css'
 import { ApolloClient, HttpLink } from '@apollo/client/core'
 import { InMemoryCache } from '@apollo/client/cache'
 
-import VueApollo from 'vue-apollo'
-
 // HTTP connection to the API
 const httpLink = new HttpLink({
   // You should use an absolute URL here

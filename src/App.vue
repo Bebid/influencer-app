@@ -45,9 +45,6 @@ export default {
                         influencers: this.influencers,
                         posts: this.posts
                     }
-                },
-                result: (oResult) => {
-                    console.log(oResult);
                 }
             }
         }

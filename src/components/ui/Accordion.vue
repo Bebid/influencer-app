@@ -1,4 +1,7 @@
 <script setup>
+const icons = import.meta.globEager('../../assets/*.svg');
+const iconDropdown = icons['../../assets/dropdown.svg'].default;
+const iconRight = icons['../../assets/right.svg'].default
 </script>
 
 <template>
@@ -9,8 +12,8 @@
                 <span v-if="showSubHeaderOnOpen || !open" class="text-gray-400">{{subHeader}}</span>
             </div>
             <div class="flex-grow-0 pl-3 pb-1 cursor-pointer" @click="open = !open" >
-                <img v-if="!open" src="/src/assets/icons/sidebar/arrow-right.svg" alt="open">
-                <img v-else src="/src/assets/icons/dropdown.svg" alt="close">
+                <img v-if="!open" :src="iconRight" alt="open">
+                <img v-else :src="iconDropdown" alt="close">
             </div>
         </div>
         <div :class="open ? 'block' : 'hidden'">

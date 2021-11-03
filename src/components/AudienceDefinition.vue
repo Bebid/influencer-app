@@ -1,5 +1,10 @@
 <script setup>
 import Card from './ui/Card.vue';
+
+const icons = import.meta.globEager('../assets/*.svg');
+const iconInfluencer = icons['../assets/influencers.svg'].default;
+const iconReach = icons['../assets/reach.svg'].default;
+const iconEngagement = icons['../assets/engagement.svg'].default;
 </script>
 
 <template>
@@ -25,7 +30,7 @@ import Card from './ui/Card.vue';
             <div class="mb-3">
                 <div class="flex gap-3 items-center">
                     <div class="flex-initial">
-                        <img class="w-10" src="/src/assets/icons/influencer.svg" alt="">
+                        <img class="w-10" :src="iconInfluencer" alt="">
                     </div>
                     <div class="flex-grow flex-col">
                         <h6 class="text-sm text-gray-400">Number of Influencers</h6>
@@ -36,7 +41,7 @@ import Card from './ui/Card.vue';
             <div class="mb-3">
                 <div class="flex gap-3 items-center">
                     <div class="flex-initial">
-                        <img class="w-10" src="/src/assets/icons/reach.svg" alt="">
+                        <img class="w-10" :src="iconReach" alt="">
                     </div>
                     <div class="flex-grow flex-col">
                         <h6 class="text-sm text-gray-400">Potential Reach</h6>
@@ -47,7 +52,7 @@ import Card from './ui/Card.vue';
             <div class="mb-3 pb-5">
                 <div class="flex gap-3 items-center">
                     <div class="flex-initial">
-                        <img class="w-10" src="/src/assets/icons/engagement.svg" alt="">
+                        <img class="w-10" :src="iconEngagement" alt="">
                     </div>
                     <div class="flex-grow flex-col">
                         <h6 class="text-sm text-gray-400">Potential Engagement</h6>
